@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:23:40 by mdegache          #+#    #+#             */
-/*   Updated: 2024/12/27 14:50:20 by mdegache         ###   ########.fr       */
+/*   Updated: 2024/12/28 13:11:21 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,56 @@
 #include "lib/GNL/get_next_line.h"
 #include "lib/minilibx/mlx.h"
 
+#define TS 32
 
+typedef struct s_point
+{
+	int		x;
+	int		y;
+}			t_point;
+
+typedef struct s_data
+{
+	char	**map;
+	void	*wall;
+	void	*empty;
+	void	*object;
+	void	*player;
+	void	*exit;
+	void	*mlx;
+	void	*win;
+	int		count_move;
+	int		count_star;
+	int		total_star;
+	t_point	exit_position;
+}			t_data;
+
+typedef struct s_count
+{
+	int		c;
+	int		e;
+	int		p;
+}			t_count;
+
+void	ft_init(t_data *param);
+int		check_extension(char *av);
+t_point ft_locate(char **map, char c);
+int 	count_char(char **map, char c);
+char	**free_map(char **map);
+char	**check_map(char **map, char **av);
+int		check_map_extension(char **map, char **av);
+int		check_len(char **map);
+int		check_start_last(char **map, char **av);
+int		check_line(char *line);
+size_t  count_line(char **av);
+void 	check_fd(int fd);
+void	check_endl(char **av);
+char    *map_line(int i, char *line, char **map);
+char	**ft_map(char **av);
+int 	verif_map(char **av);
+int 	check_count_char(char **map);
+int		flood_fill(char **map, t_point start);
+void	flood_fill_recursive(char **map, t_point start);
+void	ft_error_map_init(void);
 
 #endif

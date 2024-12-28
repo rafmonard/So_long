@@ -6,7 +6,7 @@
 #    By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 08:49:17 by mdegache          #+#    #+#              #
-#    Updated: 2024/12/27 14:31:11 by mdegache         ###   ########.fr        #
+#    Updated: 2024/12/28 12:10:28 by mdegache         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,11 @@ GNL_FILES = lib/GNL/get_next_line.c\
 LIBFT_FILES = lib/libft/ft_itoa.c
 
 SRC = main.c\
+		verif_map.c\
+		build_map.c\
+		check_map.c\
+		flood_fill.c\
+		free_funct.c\
 
 OBJ = $(SRC:.c=.o)
 OBJ_LIB = $(GNL_FILES:.c=.o) $(PRINTF_FILES:.c=.o) $(LIBFT_FILES:.c=.o)
