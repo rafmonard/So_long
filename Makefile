@@ -6,7 +6,7 @@
 #    By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 08:49:17 by mdegache          #+#    #+#              #
-#    Updated: 2024/12/28 12:10:28 by mdegache         ###   ########.fr        #
+#    Updated: 2024/12/29 09:47:36 by mdegache         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRC = main.c\
 		check_map.c\
 		flood_fill.c\
 		free_funct.c\
+		ft_window.c\
 
 OBJ = $(SRC:.c=.o)
 OBJ_LIB = $(GNL_FILES:.c=.o) $(PRINTF_FILES:.c=.o) $(LIBFT_FILES:.c=.o)

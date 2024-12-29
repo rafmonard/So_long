@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:23:40 by mdegache          #+#    #+#             */
-/*   Updated: 2024/12/28 13:11:21 by mdegache         ###   ########.fr       */
+/*   Updated: 2024/12/29 10:04:57 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,7 @@ int 	check_count_char(char **map);
 int		flood_fill(char **map, t_point start);
 void	flood_fill_recursive(char **map, t_point start);
 void	ft_error_map_init(void);
+void    get_window(t_data *param, char **av);
+void	clean_all(t_data *param);
 
 #endif

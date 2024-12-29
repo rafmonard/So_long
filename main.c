@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:23:09 by mdegache          #+#    #+#             */
-/*   Updated: 2024/12/28 13:05:31 by mdegache         ###   ########.fr       */
+/*   Updated: 2024/12/29 10:39:33 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,13 @@ int main(int ac, char **av)
         return (0);
     }
     ft_init(&param);
+    get_window(&param, av);
     
+
+
+
+
     free_map(param.map);
+    // clean_all(&param);
     return (0);
 }
