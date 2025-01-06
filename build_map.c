@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 09:14:21 by mdegache          #+#    #+#             */
-/*   Updated: 2024/12/28 13:08:31 by mdegache         ###   ########.fr       */
+/*   Updated: 2025/01/06 11:24:37 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,14 @@ size_t  count_line(char **av)
 	return (count);
 }
 
-void check_fd(int fd)
+int	check_fd(int fd)
 {
     if (fd < 0)
-    {
+	{
         ft_printf("Error\nInvalid fd\n");
-        exit(0);
-    }
+		return (0);
+	}
+	return (1);
 }
 
 void	check_endl(char **av)
@@ -109,7 +110,8 @@ char **ft_map(char **av)
     
     check_endl(av);
     fd = open(av[1], O_RDONLY);
-    check_fd(fd);
+    if (check_fd(fd) == 0)
+		return (NULL);
     i = 0;
     len_map = count_line(av);
     map = malloc(sizeof(char *) * (len_map + 1));
@@ -119,9 +121,8 @@ char **ft_map(char **av)
     {
         line = get_next_line(fd);
         map[i] = map_line(i, line, map);
-        if (!map[i])
+        if (!map[i++])
             return(NULL);
-        i++;
     }
     map[i] = NULL;
     close(fd);

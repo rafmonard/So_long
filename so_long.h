@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:23:40 by mdegache          #+#    #+#             */
-/*   Updated: 2024/12/29 10:04:57 by mdegache         ###   ########.fr       */
+/*   Updated: 2025/01/06 10:58:15 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,12 @@ t_point ft_locate(char **map, char c);
 int 	count_char(char **map, char c);
 char	**free_map(char **map);
 char	**check_map(char **map, char **av);
-int		check_map_extension(char **map, char **av);
+int		check_map_ann(char **map, char **av);
 int		check_len(char **map);
 int		check_start_last(char **map, char **av);
 int		check_line(char *line);
 size_t  count_line(char **av);
-void 	check_fd(int fd);
+int 	check_fd(int fd);
 void	check_endl(char **av);
 char    *map_line(int i, char *line, char **map);
 char	**ft_map(char **av);

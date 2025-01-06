@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:23:09 by mdegache          #+#    #+#             */
-/*   Updated: 2024/12/29 10:39:33 by mdegache         ###   ########.fr       */
+/*   Updated: 2025/01/06 13:14:01 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main(int ac, char **av)
     
     if (ac != 2 || !check_extension(av[1]))
     {
-        ft_printf("Error\nthe arg is not valid\n");
+        ft_printf("Error\nThe arg is not valid\n");
         return (0);
     }
     if (verif_map(av) == 0)
@@ -58,12 +58,10 @@ int main(int ac, char **av)
     }
     ft_init(&param);
     get_window(&param, av);
+    mlx_loop(param.mlx);
+    //set_image(&param, av);
     
-
-
-
-
     free_map(param.map);
-    // clean_all(&param);
+    clean_all(&param);
     return (0);
 }

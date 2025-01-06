@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 09:18:39 by mdegache          #+#    #+#             */
-/*   Updated: 2024/12/29 10:37:37 by mdegache         ###   ########.fr       */
+/*   Updated: 2025/01/06 10:37:47 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,28 +58,5 @@ int check_count_char(char **map)
 		free_map(map);
 		return (0);
 	}
-	return (1);
-}
-
-int verif_map(char **av)
-{
-    char    **map;
-    int flood;
-    t_point start;
-
-    map = ft_map(av);
-	if (!map)
-		return (0);
-	if (!check_count_char(map))
-		return (0);
-	start = ft_locate(map, 'P');
-	flood = flood_fill(map, (t_point){start.x, start.y});
-	if (flood == 0)
-	{
-		ft_printf("Error\nYou can't go through the wall\n");
-		free_map(map);
-		return (0);
-	}
-	free_map(map);
 	return (1);
 }

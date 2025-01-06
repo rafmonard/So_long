@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 09:28:00 by mdegache          #+#    #+#             */
-/*   Updated: 2024/12/29 10:38:03 by mdegache         ###   ########.fr       */
+/*   Updated: 2025/01/06 14:52:49 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,22 @@ void    get_window(t_data *param, char **av)
         free(param->mlx);
         free_map(param->map);
         return ;
+    }
+}
+void    set_image(t_data *param, char **av)
+{
+    int x;
+    int y;
+
+    x = 0;
+    y = 0;
+    while (param->map[y] != NULL)
+    {
+        while (param->map[y][x] != NULL)
+        {
+            mlx_put_image_to_window(param->mlx, param->win, );
+            x++;
+        }
+        y++;
     }
 }

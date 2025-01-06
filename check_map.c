@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 10:39:12 by mdegache          #+#    #+#             */
-/*   Updated: 2024/12/28 12:05:23 by mdegache         ###   ########.fr       */
+/*   Updated: 2025/01/06 11:21:20 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	check_len(char **map)
 	return (1);
 }
 
-int	check_map_extension(char **map, char **av)
+int	check_map_ann(char **map, char **av)
 {
 	if (check_len(map) == 0)
 	{
@@ -101,7 +101,7 @@ char	**check_map(char **map, char **av)
 
 	total_lines = count_line(av);
 	i = 1;
-	if (check_map_extension(map, av) == 0)
+	if (check_map_ann(map, av) == 0)
 		return (free_map(map));
 	while (map[i] && i < total_lines)
 	{
