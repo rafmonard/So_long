@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:23:09 by mdegache          #+#    #+#             */
-/*   Updated: 2025/01/06 13:14:01 by mdegache         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:56:15 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,11 @@ int main(int ac, char **av)
     }
     ft_init(&param);
     get_window(&param, av);
+    init_image(&param);
+    set_image(&param, av);
+    mlx_hook(param.win, 17, 0, close_win, NULL);
+    mlx_key_hook(param.win, key_press, NULL);
     mlx_loop(param.mlx);
-    //set_image(&param, av);
-    
     free_map(param.map);
     clean_all(&param);
     return (0);

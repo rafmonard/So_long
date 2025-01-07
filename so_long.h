@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:23:40 by mdegache          #+#    #+#             */
-/*   Updated: 2025/01/06 10:58:15 by mdegache         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:46:48 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,9 @@ void	flood_fill_recursive(char **map, t_point start);
 void	ft_error_map_init(void);
 void    get_window(t_data *param, char **av);
 void	clean_all(t_data *param);
+void    set_image(t_data *param, char **av);
+void    init_image(t_data *param);
+int close_win(void *param);
+int key_press(int keycode, void *param);
 
 #endif

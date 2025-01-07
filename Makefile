@@ -6,7 +6,7 @@
 #    By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 08:49:17 by mdegache          #+#    #+#              #
-#    Updated: 2024/12/29 09:47:36 by mdegache         ###   ########.fr        #
+#    Updated: 2025/01/07 14:43:24 by mdegache         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRC = main.c\
 		flood_fill.c\
 		free_funct.c\
 		ft_window.c\
+		move_player.c\
 
 OBJ = $(SRC:.c=.o)
 OBJ_LIB = $(GNL_FILES:.c=.o) $(PRINTF_FILES:.c=.o) $(LIBFT_FILES:.c=.o)
