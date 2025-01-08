@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:23:40 by mdegache          #+#    #+#             */
-/*   Updated: 2025/01/07 14:46:48 by mdegache         ###   ########.fr       */
+/*   Updated: 2025/01/08 14:21:17 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_point
 
 typedef struct s_data
 {
+	char	**av;
 	char	**map;
 	void	*wall;
 	void	*empty;
@@ -51,7 +52,7 @@ typedef struct s_count
 	int		p;
 }			t_count;
 
-void	ft_init(t_data *param);
+void	ft_init(t_data *param, char **av);
 int		check_extension(char *av);
 t_point ft_locate(char **map, char c);
 int 	count_char(char **map, char c);
@@ -75,7 +76,13 @@ void    get_window(t_data *param, char **av);
 void	clean_all(t_data *param);
 void    set_image(t_data *param, char **av);
 void    init_image(t_data *param);
-int close_win(void *param);
-int key_press(int keycode, void *param);
+int 	close_win(void *param);
+int 	key_press(int keycode, void *param);
+void 	character_move(int keycode, t_data *param);
+void    move_up(t_data  *param);
+void    move_down(t_data *param);
+void    move_left(t_data *param);
+void    move_right(t_data *param);
+void    check_exit(t_data *param);
 
 #endif

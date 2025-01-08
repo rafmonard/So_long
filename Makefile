@@ -6,7 +6,7 @@
 #    By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 08:49:17 by mdegache          #+#    #+#              #
-#    Updated: 2025/01/07 14:43:24 by mdegache         ###   ########.fr        #
+#    Updated: 2025/01/08 10:29:12 by mdegache         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ PRINTF_FILES = lib/ft_printf/ft_printf.c\
 GNL_FILES = lib/GNL/get_next_line.c\
         	lib/GNL/get_next_line_utils.c\
 			
-LIBFT_FILES = lib/libft/ft_itoa.c
+LIBFT_FILES = 
 
 SRC = main.c\
 		verif_map.c\
@@ -35,6 +35,7 @@ SRC = main.c\
 		free_funct.c\
 		ft_window.c\
 		move_player.c\
+		all_moves.c\
 
 OBJ = $(SRC:.c=.o)
 OBJ_LIB = $(GNL_FILES:.c=.o) $(PRINTF_FILES:.c=.o) $(LIBFT_FILES:.c=.o)

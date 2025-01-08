@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:23:09 by mdegache          #+#    #+#             */
-/*   Updated: 2025/01/07 14:56:15 by mdegache         ###   ########.fr       */
+/*   Updated: 2025/01/08 09:59:41 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,9 @@ int check_extension(char *av)
     return(0);
 }
 
-void    ft_init(t_data *param)
+void    ft_init(t_data *param, char **av)
 {
+    param->av = av;
     param->count_move = 0;
     param->count_star = 0;
     param->total_star = count_char(param->map, 'C');
@@ -56,12 +57,12 @@ int main(int ac, char **av)
         ft_printf("Error\nInvalid map\n");
         return (0);
     }
-    ft_init(&param);
-    get_window(&param, av);
+    ft_init(&param, av);
+    get_window(&param, param.av);
     init_image(&param);
-    set_image(&param, av);
+    set_image(&param, param.av);
     mlx_hook(param.win, 17, 0, close_win, NULL);
-    mlx_key_hook(param.win, key_press, NULL);
+    mlx_key_hook(param.win, key_press, &param);
     mlx_loop(param.mlx);
     free_map(param.map);
     clean_all(&param);
