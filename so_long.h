@@ -6,7 +6,7 @@
 /*   By: mdegache <mdegache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:23:40 by mdegache          #+#    #+#             */
-/*   Updated: 2025/01/08 14:21:17 by mdegache         ###   ########.fr       */
+/*   Updated: 2025/01/09 14:30:54 by mdegache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,5 @@ void    move_up(t_data  *param);
 void    move_down(t_data *param);
 void    move_left(t_data *param);
 void    move_right(t_data *param);
-void    check_exit(t_data *param);
 
 #endif
