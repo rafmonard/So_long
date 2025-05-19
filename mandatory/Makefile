@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = so_long
+NAME = so_long_Pourri
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g -Ilib/minilibx
